@@ -13,9 +13,7 @@ Three table types per trading day:
 
 ## Methodology
 
-Cleaning and trade classification are based on **Holden & Jacobsen (2014)** — *Liquidity Measurement Problems in Fast, Competitive Markets: Expensive and Cheap Solutions*, Journal of Finance, Vol. LXIX No. 4.
-
-The Holden & Jacobsen methodology targets regular trading hours (09:30–16:00 ET). For pre/post (after-hours) trading, we follow the four adaptations suggested by **Grégoire & Martineau (2022)** — *How is Earnings News Transmitted to Stock Prices?*, Journal of Accounting Research, Vol. 60 No. 1, as suggested in their repository at [vgreg/earnings_news_jar](https://github.com/vgreg/earnings_news_jar):
+Cleaning and trade classification are based on **Holden & Jacobsen (2014, JF)**. The **Holden & Jacobsen (2014, JF)** methodology targets regular trading hours (09:30–16:00 ET). For pre/post (after-hours) trading, we follow the four adaptations suggested by **Grégoire & Martineau (2022, JAR)**, as suggested in their repository at [vgreg/earnings_news_jar](https://github.com/vgreg/earnings_news_jar):
 
 1. Add closing quote condition (`C`) to valid quote types
 2. Preserve empty/withdrawn quotes rather than deleting them (better to keep potentially problematic updates than discard them in thin markets)
@@ -81,3 +79,9 @@ Sessions: `pre` (< 09:30 ET), `regular` (09:30–16:00), `post` (> 16:00). Clean
 ```r
 install.packages(c("tidyverse", "DBI", "RPostgres", "data.table", "hms", "dbplyr"))
 ```
+
+## References
+
+Holden, C. W., & Jacobsen, S. (2014). Liquidity Measurement Problems in Fast, Competitive Markets: Expensive and Cheap Solutions. *The Journal of Finance*, 69(4), 1747–1785. https://doi.org/10.1111/jofi.12127
+
+Grégoire, V., & Martineau, C. (2022). How is Earnings News Transmitted to Stock Prices? *Journal of Accounting Research*, 60(1), 261–297. https://doi.org/10.1111/1475-679X.12394
