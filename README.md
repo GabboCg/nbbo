@@ -13,9 +13,9 @@ Three table types per trading day:
 
 ## Methodology
 
-Cleaning and trade classification are based on **Holden & Jacobsen (2014)** — *Liquidity Measurement Problems in Fast, Competitive Markets: Expensive and Cheap Solutions*, Journal of Finance, Vol. LXIX No. 4 (in `refs/`).
+Cleaning and trade classification are based on **Holden & Jacobsen (2014)** — *Liquidity Measurement Problems in Fast, Competitive Markets: Expensive and Cheap Solutions*, Journal of Finance, Vol. LXIX No. 4.
 
-The Holden & Jacobsen methodology targets regular trading hours (09:30–16:00 ET). For pre/post (after-hours) trading, we follow the four adaptations suggested by **Grégoire & Martineau (2022)** — *How is Earnings News Transmitted to Stock Prices?*, Journal of Accounting Research, Vol. 60 No. 1 (in `refs/`) — via their replication code at [vgreg/earnings_news_jar](https://github.com/vgreg/earnings_news_jar):
+The Holden & Jacobsen methodology targets regular trading hours (09:30–16:00 ET). For pre/post (after-hours) trading, we follow the four adaptations suggested by **Grégoire & Martineau (2022)** — *How is Earnings News Transmitted to Stock Prices?*, Journal of Accounting Research, Vol. 60 No. 1, as suggested in their repository at [vgreg/earnings_news_jar](https://github.com/vgreg/earnings_news_jar):
 
 1. Add closing quote condition (`C`) to valid quote types
 2. Preserve empty/withdrawn quotes rather than deleting them (better to keep potentially problematic updates than discard them in thin markets)
