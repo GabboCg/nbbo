@@ -92,7 +92,7 @@ res <- tryCatch({
     
 }, error = function(e) {
     
-    message("Error at row ", j, " (", SYMS, " / ", DATES, "): ", e$message)
+    message("Error at ", " (", SYMS, " / ", DATES, "): ", e$message)
     NULL
     
 })
