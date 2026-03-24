@@ -1,0 +1,17 @@
+# Claude Code
+CLAUDE.md
+
+# R
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Environment variables (credentials)
+.Renviron
+
+# Output data
+05_smithsoJAR.csv
+
+# macOS
+.DS_Store
