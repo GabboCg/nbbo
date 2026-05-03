@@ -144,5 +144,5 @@ clean_complete_nbbo <- BuySellIndicators |>
     )
 
 # Export
-write_csv(clean_complete_nbbo, "AAPL_20230504.csv")
+write_csv(clean_complete_nbbo, "data/AAPL_20230504.csv")
     
