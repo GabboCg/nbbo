@@ -3,7 +3,11 @@
 [![R](https://img.shields.io/badge/R-%3E%3D4.1-276DC3?logo=r&logoColor=white)](https://www.r-project.org/)
 [![WRDS](https://img.shields.io/badge/Data-WRDS-003366)](https://wrds-www.wharton.upenn.edu/)
 
-Downloads and cleans millisecond TAQ data from WRDS, then classifies each trade's direction using three algorithms (LR, EMO, CLNV).
+An R implementation that downloads and cleans millisecond TAQ data from WRDS and signs each trade as a buy or sell using three standard algorithms (LR, EMO, CLNV).
+
+## Overview
+
+This R pipeline pulls tick-by-tick TAQ millisecond data from WRDS, cleans quotes and trades following Holden & Jacobsen (2014, JF), reconstructs the official NBBO, and matches each trade to the prevailing quote. It then signs trades as buys or sells using three standard algorithms (LR, EMO, CLNV). Pre- and post-market hours are handled with the relaxed rules from Grégoire & Martineau (2022, JAR).
 
 ## Data Source
 
