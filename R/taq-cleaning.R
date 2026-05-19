@@ -48,7 +48,7 @@ clean_nbbo_sessioned <- function(DailyNBBO, flag_remove_dupes = FALSE) {
     # - Pre/Post: A B H O R W + C
     NBBO2 <- NBBO2[
         (session == "regular" & qu_cond %in% c("A", "B", "H", "O", "R", "W")) |
-        (session != "regular" & qu_cond %in% c("A", "B", "H", "O", "R", "W", "C"))
+            (session != "regular" & qu_cond %in% c("A", "B", "H", "O", "R", "W", "C"))
     ]
     
     # Regular-only deletion of "both sides invalid" rows (do NOT do pre/post)
@@ -56,7 +56,7 @@ clean_nbbo_sessioned <- function(DailyNBBO, flag_remove_dupes = FALSE) {
         session != "regular" |
             (
                 !((best_ask <= 0 | is.na(best_ask)) & (best_bid <= 0 | is.na(best_bid))) &
-                !((best_asksizeshares <= 0 | is.na(best_asksizeshares)) & (best_bidsizeshares <= 0 | is.na(best_bidsizeshares)))
+                    !((best_asksizeshares <= 0 | is.na(best_asksizeshares)) & (best_bidsizeshares <= 0 | is.na(best_bidsizeshares)))
             )
     ]
     
@@ -152,7 +152,7 @@ clean_quotes_sessioned <- function(DailyQuote) {
     # Pre/Post: relaxed filters, include C, do NOT delete crossed/wide/withdrawn/etc
     quote_extended <- quoteAB[
         session != "regular" &
-        qu_cond %in% c("A", "B", "H", "O", "R", "W", "C")
+            qu_cond %in% c("A", "B", "H", "O", "R", "W", "C")
     ]
     
     rbindlist(list(quote_regular, quote_extended), use.names = TRUE, fill = TRUE)
