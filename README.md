@@ -90,5 +90,4 @@ install.packages(c("tidyverse", "DBI", "RPostgres", "data.table", "hms", "dbplyr
 ## References
 
 - Holden, C. W., & Jacobsen, S. (2014). Liquidity Measurement Problems in Fast, Competitive Markets: Expensive and Cheap Solutions. *The Journal of Finance*, 69(4), 1747–1785. 
-
 - Grégoire, V., & Martineau, C. (2022). How is Earnings News Transmitted to Stock Prices? *Journal of Accounting Research*, 60(1), 261–297. 
